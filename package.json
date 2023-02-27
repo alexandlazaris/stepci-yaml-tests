@@ -1,0 +1,23 @@
+{
+  "name": "stepci-yaml-tests",
+  "version": "1.0.0",
+  "description": "A new way to design integration tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandlazaris/stepci-yaml-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandlazaris/stepci-yaml-tests/issues"
+  },
+  "homepage": "https://github.com/alexandlazaris/stepci-yaml-tests#readme",
+  "dependencies": {
+    "stepci": "^2.6.4"
+  }
+}

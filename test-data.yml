@@ -1,0 +1,31 @@
+version: "1.1"
+name: Basic Auth
+tests:
+  example:
+    testdata:
+      file: data.csv
+    steps:
+      - name: Basic Auth
+        http:
+          url: https://httpbin.org/basic-auth/${{testdata.username}}/${{testdata.password}}
+          method: GET
+          auth:
+            basic:
+              username: ${{ testdata.username }}
+              password: ${{ testdata.password }}
+          check:
+            status: 200
+            schema:
+              type: object
+              properties: 
+                authenticated: 
+                  type: boolean
+                user: 
+                  type: string
+              required: 
+                - authenticated
+                - user
+            jsonpath:
+              $.user:
+                - eq: ${{ testdata.username }}
+
